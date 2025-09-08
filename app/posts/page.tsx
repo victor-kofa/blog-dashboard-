@@ -13,12 +13,12 @@ import {
 const POSTS_PER_PAGE = 10;
 
 interface Props {
-  searchParams: Promise<{ page?: string }>; // 👈 make it a Promise
+  searchParams: Promise<{ page?: string }>; 
 }
 
 export default async function PostsPage({ searchParams }: Props) {
   try {
-    // ✅ Await searchParams before using
+    // Await searchParams before using
     const params = await searchParams;
     const page = Number(params.page) || 1;
 
