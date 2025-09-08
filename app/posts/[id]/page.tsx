@@ -18,11 +18,14 @@ export default async function PostDetailPage({ params }: Props) {
 
     return (
       <>
-        <h1 className="text-xl font-bold mb-4">
-          <Link href={"/posts"} className="text-blue-600 hover:underline">
+        <div className="text-xl font-bold mb-4 mx-auto max-w-2xl px-4 py-8">
+          <Link
+            href={"/posts"}
+            className="text-white rounded-md bg-rose-400 px-2 py-3  text-xs border-2 hover:bg-rose-500 hover:transition hover:ease-out duration-500"
+          >
             ← Back to Posts
           </Link>
-        </h1>
+        </div>
         <div className="max-w-2xl mx-auto px-4 py-8">
           <h1 className="text-2xl font-bold mb-4">{post.title}</h1>
           <p className="text-gray-700 mb-4">{post.body}</p>
